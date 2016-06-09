@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>INDEX</title>
+</head>
+  <body>
+
+    <form action="/upload" enctype="multipart/form-data" method="post">
+      <input type="file" name="upload" multiple="multiple">
+      <input type="submit" value="Upload">
+    </form>
+
+    <hr />
+
+    <ul>
+      <% files.forEach(function(f){ %>
+        <li>
+          <h4><%= f.filename %></h4>
+          <a href="/download/<%- f._id %>" download>DOWNLOAD</a>
+          <a href="/remove/<%- f._id %>">DELETE</a>
+        </li>
+      <% }); %>
+    </ul>
+
+    <script src="http://localhost:8686/bundle.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+    </script>
+  </body>
+</html>
