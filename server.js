@@ -110,6 +110,7 @@ app.get('/remove/:id', (req, res) => {
 /**
  * upload file
  */
+/*
 app.post('/upload', (req, res) => {
   const reqUpload = new UploadRequestEmitter();
 
@@ -203,11 +204,11 @@ app.post('/upload', (req, res) => {
 
   form.parse(req);
 });
+*/
 
 /**
  * handle upload
  */
-/*
 app.post('/upload', (req, res) => {
   if (gfs.instance === null) {
     res.send('ERROR: GFS INSTANCE IS NULL');
@@ -243,7 +244,7 @@ app.post('/upload', (req, res) => {
 
   form.parse(req);
 });
-*/
+
 
 /**
  * handle socket connections

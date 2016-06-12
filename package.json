@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "webpack": "webpack",
-    "webpackServer": "webpack-dev-server --hot --inline --port 8686",
-    "watchServer": "nodemon.cmd -e js,jsx,json -w server.js -w src/server -i src/client -x babel-node.cmd server",
-    "devServers": "parallelshell.cmd \"npm run webpackServer\" \"npm run watchServer\" ",
-    "testexec": "node_modules/.bin/babel-node server"
+    "webpackServer": "./node_modules/.bin/webpack-dev-server --hot --inline --port 8686",
+    "watchServer": "./node_modules/.bin/nodemon -e js,jsx,json -w server.js -w src/server -i src/client -x babel-node server",
+    "devServers": "./node_modules/.bin/parallelshell \"npm run webpackServer\" \"npm run watchServer\" ",
+    "testexec": "./node_modules/.bin/babel-node server"
   },
   "author": "rogovski",
   "license": "MIT",
